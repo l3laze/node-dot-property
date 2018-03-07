@@ -1,29 +1,21 @@
-language:
-  - node_js
-  - version: 8
+language: node_js
 
-os:
-  - linux
+node_js: "lts/*"
+
+os: linux
 
 cache:
   yarn: true
 
 before_install:
-  - nvm install --lts
-  - nvm use 'lts/*'
   - npm i -g yarn
-  - nvm --version
-  - npm --version
-  - node --version
-  - yarn --version
-  - yarn
 
 script:
   - yarn lint
   - yarn nyc
 
 after_success:
-  - chmod 0755 /Users/travis/build/l3laze/node-dot-property/.nyc_output
+  - chmod 0755 /home/travis/build/l3laze/node-dot-property/.nyc_output
   - yarn textcov
   - yarn codecov && yarn codacy
 
