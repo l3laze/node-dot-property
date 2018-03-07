@@ -1,0 +1,12 @@
+
+\.DS_Store
+
+\.nyc_output/4c60c970121ee0d3720127cda4231e12\.json
+
+\.nyc_output/9fa3364ab98d6463c7fedbc25785d9cf\.json
+
+coverage/
+
+node_modules/
+
+coverage\.lcov
